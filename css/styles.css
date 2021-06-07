@@ -1,0 +1,147 @@
+:root{
+    --primary:#3dcfd3;
+    --dark:#161616;
+    --pure:#FFFFFF;
+    --ternary:#898989;
+    --light:#F2F2F2;
+    --secondary:#070606;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden !important;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar-brand{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+.custom-nav-item a{
+    color: white !important;
+    margin-right: .2rem;
+}
+.custom-nav-item:hover{
+    background-color: var(--primary);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+.remove-img-margin{
+    margin:0;
+    padding: 0;
+}
+.home-img img{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+/* .img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #225470;
+} */
+.img-content{
+    position: absolute;
+    z-index: 2;
+    top: 55%;
+    left: 35%;
+    color: #FFFFFF;
+    text-align: center;
+}
+.img-content p{
+    margin-bottom: .7rem ;
+}
+
+/* .img-content a{
+    text-decoration: none;
+} */
+
+.custom-btn{
+    padding: 0.8rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border:2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+.custom-btn-primary{
+    background-color: var(--primary);
+    color:white;
+}
+.custom-btn-primary1{
+    background-color: var(--primary);
+    padding: 0.5rem 1.5rem;
+    color:white;
+}
+.custom-btn:hover{
+    color: var(--primary);
+    background: none;
+    text-decoration: none;
+    border: 2px solid var(--primary);
+}
+.txt-banner {
+    background-color: var(--ternary);
+}
+/* courses */
+.courses {
+    background: #F3F3F3;
+}
+
+.stripe {
+    background-image: linear-gradient(240deg ,#504d4d , #898989);
+    padding: 3rem;
+    height: 13rem;
+    margin-top: 4rem;
+    transform: rotate(10deg);
+    z-index: -5;
+}
+.social{
+    background-color:var(--ternary);
+}
+.social a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.category a:hover{
+    color: var(--primary) !important;
+    text-decoration: none;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    transition: all .2s ease-in ;   
+}
+
+/* Utilities classes */
+.black-color{
+    color: #070606;
+}
+
+
+@media screen and (min-width:0px) and (max-width:700px){
+    .my-content , .txt-banner , .stripe {
+        display: none;
+    }
+
+    .img-content {
+        top: 25%;
+        left:25%;
+    }
+}
