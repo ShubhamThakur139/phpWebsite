@@ -23,34 +23,34 @@
 
     <!-- Navigation starts  -->
     <nav class="navbar navbar-expand-sm navbar-dark  pl-5 fixed-top">
-        <div class="container-fluid ">
+        <div class="container-fluid">
             <a class="navbar-brand " href="index.php">DLearning</a>
             <span class="navbar-text mr-5">New way of Learning</span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse all-link" id="navbarNavAltMarkup">
-                <ul class="navbar-nav custom-nav pl-5">
+                <ul class="navbar-nav custom-nav pl-5 ml-auto">
                     <li class="nav-item custom-nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                    <li class="nav-item custom-nav-item"><a class="nav-link" href="paymentstatus.php">Payment Status</a></li>
+                    <!-- <li class="nav-item custom-nav-item"><a class="nav-link" href="paymentstatus.php">Payment Status</a></li> -->
                     <li class="nav-item custom-nav-item"><a class="nav-link" href="./courses.php">Courses</a></li>
                     <?php
-                        session_start();
-                        if(isset($_SESSION['is_login'])){
-                            echo '
+                    session_start();
+                    if (isset($_SESSION['is_login'])) {
+                        echo '
                             <li class="nav-item custom-nav-item"><a class="nav-link" href="studentrecord/studentProfile.php">My Profile</a></li>
                             <li class="nav-item custom-nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
                             ';
-                        }else {
-                            echo '
+                    } else {
+                        echo '
                             <li class="nav-item custom-nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#StudentLoginModal" href="#">Log In</a></li>
                             <li class="nav-item custom-nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#StudentSignUpModal" href="#">Sign up</a></li> ';
-                        }
-                    
+                    }
+
                     ?>
 
-                    
-                    <li class="nav-item custom-nav-item"><a class="nav-link" href="#">Feedback</a></li>
+
+                    <!-- <li class="nav-item custom-nav-item"><a class="nav-link" href="#">Feedback</a></li> -->
                     <li class="nav-item custom-nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>

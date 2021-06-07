@@ -46,7 +46,7 @@ if (isset($studEmail)) {
 
     <nav class="navbar navbar-dark fixed-top flex-md-nowrap pl-5 p-0 shadow mb-5" style="background-color: #225470;">
         <div class="container-fluid">
-            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="../studentProfile.php">DLearning</a>
+            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="../index.php">DLearning</a>
             <span class="navbar-text mr-5">New way of Learning</span>
         </div>
     </nav>

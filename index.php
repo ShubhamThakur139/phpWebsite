@@ -10,11 +10,10 @@ include('./mainfiles/header.php');
 <section class="home-page">
     <div class="container-fluid remove-img-margin">
         <div class="home-img">
-            <!-- <img src="./images/homeBackground.jpg"  class="img-fluid" alt="This is an background image"> -->
             <img src="./images/picture.jpg" class="img-fluid" alt="This is an background image">
             <div class="img-content">
-                <h1 class="my-content">Welcome to DigitalLearning</h1>
-                <p class="my-content">New way of Learning</p>
+                <h1 class="my-content">Welcome to <span>DigitalLearning</span></h1>
+                <p class="my-content">new way of learning</p>
                 <br>
 
                 <?php
@@ -65,16 +64,16 @@ include('./mainfiles/header.php');
                 while ($row = $result->fetch_assoc()) {
                     $course_id = $row['course_id'];
                     echo '
-                            <a href="coursedetails.php?course_id = '.$course_id.'" class="btn" style="text-align: left; padding: 0px; margin: 0px;">
+                            <a href="coursedetails.php?course_id = ' . $course_id . '" class="btn" style="text-align: left; padding: 0px; margin: 0px;">
                             <div class="card" >
-                            <img class="card-img-top" src="' . str_replace('..','.', $row['course_img']) . '" alt="Card image">
+                            <img class="card-img-top" src="' . str_replace('..', '.', $row['course_img']) . '" alt="Card image">
                             <div class="card-body">
                                 <h5 class="card-title">' . $row['course_name'] . '</h5>
                                 <p class="card-text">' . $row['course_desc'] . '</p>
                             </div>
                             <div class="card-footer">
                                 <p class="card-text d-inline">Price: <small><del>&#8377 ' . $row['course_original_price'] . ' </del></small><span class="font-weight-bolder">&#8377 ' . $row['course_price'] . '</span></p>
-                                <a href="coursedetails.php?course_id = '.$course_id.'" class="custom-btn custom-btn-primary font-weight-bolder float-right">Enroll</a>
+                                <a href="coursedetails.php?course_id = ' . $course_id . '" class="custom-btn custom-btn-primary font-weight-bolder float-right">Enroll</a>
                             </div>
                         </div>
                     </a>';
@@ -92,16 +91,16 @@ include('./mainfiles/header.php');
                 while ($row = $result->fetch_assoc()) {
                     $course_id = $row['course_id'];
                     echo '
-                            <a href="coursedetails.php?course_id = '.$course_id.'" class="btn" style="text-align: left; padding: 0px; margin: 0px;">
+                            <a href="coursedetails.php?course_id = ' . $course_id . '" class="btn" style="text-align: left; padding: 0px; margin: 0px;">
                             <div class="card" >
-                            <img class="card-img-top" src="' . str_replace('..','.', $row['course_img']) . '" alt="Card image">
+                            <img class="card-img-top" src="' . str_replace('..', '.', $row['course_img']) . '" alt="Card image">
                             <div class="card-body">
                                 <h5 class="card-title">' . $row['course_name'] . '</h5>
                                 <p class="card-text">' . $row['course_desc'] . '</p>
                             </div>
                             <div class="card-footer">
                                 <p class="card-text d-inline">Price: <small><del>&#8377 ' . $row['course_original_price'] . ' </del></small><span class="font-weight-bolder">&#8377 ' . $row['course_price'] . '</span></p>
-                                <a href="coursedetails.php?course_id = '.$course_id.'" class="custom-btn custom-btn-primary font-weight-bolder float-right">Enroll</a>
+                                <a href="coursedetails.php?course_id = ' . $course_id . '" class="custom-btn custom-btn-primary font-weight-bolder float-right">Enroll</a>
                             </div>
                         </div>
                     </a>';
@@ -110,7 +109,7 @@ include('./mainfiles/header.php');
             ?>
         </div>
         <!-- second deck end  -->
-        
+
         <div class="text-center mt-5 pb-5">
             <a class="custom-btn custom-btn-primary" href="courses.php">View All Courses</a>
         </div>
@@ -128,8 +127,7 @@ include('./contact.php');
 <!-- end Contact us  -->
 
 <!-- start student testimonial  -->
-
-<section class="student-testimonial">
+<!-- <section class="student-testimonial">
     <div class="container-fluid mt-5" style="background-color: #3dcfd3;" id="Feedback">
         <h1 class="text-center text-white p-4 testyheading">Student's Feedback</h1>
         <div class="row">
@@ -151,8 +149,7 @@ include('./contact.php');
             </div>
         </div>
     </div>
-
-</section>
+</section> -->
 <!-- end student testimonial  -->
 
 <!-- start social links  -->
@@ -161,16 +158,16 @@ include('./contact.php');
     <div class="container-fluid social p-2">
         <div class="row">
             <div class="col-sm">
-                <a href="#"><i class="fab fa-facebook-f mr-2"></i>Facebook</a>
+                <a href="https://www.facebook.com/shibuuu55/" target="_"><i class="fab fa-facebook-f mr-2"></i>Facebook</a>
             </div>
             <div class="col-sm">
-                <a href="#"><i class="fab fa-twitter mr-2"></i>Twitter</a>
+                <a href="https://github.com/Shibuu155" target="_"><i class="fab fa-github mr-2"></i>Github</a>
             </div>
             <div class="col-sm">
-                <a href=""><i class="fab fa-instagram mr-2"></i>Instagram</a>
+                <a href="https://www.instagram.com/___thakurshubham/" target="_"><i class="fab fa-instagram mr-2"></i>Instagram</a>
             </div>
             <div class="col-sm">
-                <a href=""><i class="fab fa-linkedin mr-2"></i>Linkedin</a>
+                <a href="https://www.linkedin.com/in/shubham-thakur-a1b179199" target="_"><i class="fab fa-linkedin mr-2"></i>Linkedin</a>
             </div>
         </div>
     </div>
@@ -220,8 +217,8 @@ include('./mainfiles/footer.php');
     mt-4 ml-2 
     col-lg-4 col-12-->
 <!-- Start second deck  -->
-        <!-- 4th card deck  -->
-        <!-- <div class="card-deck col-lg-4 col-12 mt-4 ml-2">
+<!-- 4th card deck  -->
+<!-- <div class="card-deck col-lg-4 col-12 mt-4 ml-2">
                     <a href="#" class="btn" style="text-align: left; padding: 0px; margin: 0px;">
 
                         <div class="card" style="width:400px">
@@ -239,7 +236,7 @@ include('./mainfiles/footer.php');
                     </a>
                 </div>
                 5th card deck  -->
-        <!-- <div class="card-deck col-lg-4 col-12 mt-4 ml-2">
+<!-- <div class="card-deck col-lg-4 col-12 mt-4 ml-2">
                     <a href="#" class="btn" style="text-align: left; padding: 0px; margin: 0px;">
 
                         <div class="card" style="width:400px">
@@ -274,4 +271,4 @@ include('./mainfiles/footer.php');
 
                     </a>
                 </div> -->
-        <!-- second deck end  -->
+<!-- second deck end  -->
