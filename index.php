@@ -176,7 +176,7 @@ include('./contact.php');
 <!-- End social links  -->
 
 <!-- start about section  -->
-<section>
+<section class="custom-footer">
     <div class="container-fluid p-4">
         <div class="container">
             <div class="row text-center">
@@ -212,63 +212,3 @@ include('./contact.php');
 include('./mainfiles/footer.php');
 ?>
 <!-- End Including footer section  -->
-
-<!-- style="width:400px" 
-    mt-4 ml-2 
-    col-lg-4 col-12-->
-<!-- Start second deck  -->
-<!-- 4th card deck  -->
-<!-- <div class="card-deck col-lg-4 col-12 mt-4 ml-2">
-                    <a href="#" class="btn" style="text-align: left; padding: 0px; margin: 0px;">
-
-                        <div class="card" style="width:400px">
-                            <img class="card-img-top" src="./images/cloudcomputing.png" alt="Card image">
-                            <div class="card-body">
-                                <h5 class="card-title">Cloud Computing</h5>
-                                <p class="card-text">Some example text.</p>
-                            </div>
-                            <div class="card-footer">
-                                <p class="card-text">Price: <small><del>&#8377 4000 </del></small><span class="font-weight-bolder">&#8377 800</span></p>
-                                <a href="#" class="custom-btn custom-btn-primary font-weight-bolder float-right">Enroll</a>
-                            </div>
-                        </div>
-
-                    </a>
-                </div>
-                5th card deck  -->
-<!-- <div class="card-deck col-lg-4 col-12 mt-4 ml-2">
-                    <a href="#" class="btn" style="text-align: left; padding: 0px; margin: 0px;">
-
-                        <div class="card" style="width:400px">
-                            <img class="card-img-top" src="./images/webdevelopmentE.jpeg" alt="Card image">
-                            <div class="card-body">
-                                <h5 class="card-title">Web Development</h5>
-                                <p class="card-text">Some example text.</p>
-                            </div>
-                            <div class="card-footer">
-                                <p class="card-text">Price: <small><del>&#8377 7000 </del></small><span class="font-weight-bolder">&#8377 1000</span></p>
-                                <a href="#" class="custom-btn custom-btn-primary font-weight-bolder float-right">Enroll</a>
-                            </div>
-                        </div>
-
-                    </a>
-                </div>
-             6th card deck 
-                <div class="card-deck col-lg-4 col-12 mt-4 ml-2">
-                    <a href="#" class="btn" style="text-align: left; padding: 0px; margin: 0px;">
-
-                        <div class="card" style="width:400px">
-                            <img class="card-img-top" src="./images/advancedjavaE.jpg" alt="Card image">
-                            <div class="card-body">
-                                <h5 class="card-title">Advanced Java programming</h5>
-                                <p class="card-text">Some example text.</p>
-                            </div>
-                            <div class="card-footer">
-                                <p class="card-text">Price: <small><del>&#8377 2500 </del></small><span class="font-weight-bolder">&#8377 400</span></p>
-                                <a href="#" class="custom-btn custom-btn-primary font-weight-bolder float-right">Enroll</a>
-                            </div>
-                        </div>
-
-                    </a>
-                </div> -->
-<!-- second deck end  -->

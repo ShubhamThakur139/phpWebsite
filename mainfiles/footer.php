@@ -18,15 +18,14 @@
       </div>
       <div class="modal-body">
         <!-- start sign up form  -->
-       <?php
+        <?php
         include('studentregistrationform.php');
-       ?>
+        ?>
         <!-- End sign up form  -->
       </div>
       <div class="modal-footer">
         <span id="successMsg"></span>
-        <button type="button" class="btn btn-primary" id="studSignUpBtn" 
-        onclick="addStud()">Sign Up</button>
+        <button type="button" class="btn btn-primary" id="studSignUpBtn" onclick="addStud()">Sign Up</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
@@ -67,7 +66,7 @@
         <!-- End Login form  -->
       </div>
       <div class="modal-footer">
-      <span id="logsuccessmsg"></span>
+        <span id="logsuccessmsg"></span>
         <button type="button" class="btn btn-primary" id="studLoginBtn" onclick="logStud()">Login</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
@@ -121,6 +120,11 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/popper.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
+<script>
+  $(window).scroll(function() {
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 720);
+  });
+</script>
 <!-- Font Awesome js  -->
 <script src="./js/all.min.js"></script>
 <!-- owl carouseal  -->
@@ -131,6 +135,8 @@
 
 <!-- Admin Ajax call javascript  -->
 <script type="text/javascript" src="js/adminajaxrequest.js"></script>
+
+
 </body>
 
 </html>

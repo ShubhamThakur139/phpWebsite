@@ -20,6 +20,11 @@ html {
     scroll-behavior: smooth;
 }
 
+.bgcolor.scrolled {
+    background-color: rgba(0, 0, 0, 0.603) !important;
+    transform: .3s;
+}
+
 .navbar-brand {
     font-family: 'Ubuntu', sans-serif;
     font-size: 2rem;
@@ -27,7 +32,13 @@ html {
     color: white;
 }
 
+.custom-nav {
+    text-transform: uppercase !important;
+    letter-spacing: 1px;
+}
+
 .custom-nav-item a {
+    text-transform: uppercase;
     color: white !important;
     margin-right: .2rem;
 }
@@ -48,8 +59,8 @@ html {
 .home-img img {
     position: relative;
     width: 100vw;
-    height: 100vh;
-    /* opacity: 50%; */
+    /* height: 100vh; */
+    height: auto;
     opacity: 0.9;
 }
 
@@ -57,7 +68,7 @@ html {
 .img-content {
     position: absolute;
     z-index: 2;
-    top: 55%;
+    top: 45%;
     left: 35%;
     color: #FFFFFF;
     text-align: center;
@@ -71,13 +82,10 @@ html {
     margin-bottom: .7rem;
 }
 
-/* .img-content a{
-    text-decoration: none;
-} */
 
 .custom-btn {
-    padding: 0.8rem 2.5rem;
-    font-size: 1rem;
+    padding: 0.6rem 2.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     border: 2px solid transparent;
     outline: none;
@@ -149,6 +157,20 @@ html {
     color: #070606;
 }
 
+.custom-footer {
+    background-color: #343A40;
+    color: white;
+}
+
+.custom-footer h5 {
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.custom-footer a {
+    text-decoration: none;
+    color: white !important;
+}
 
 @media screen and (min-width:0px) and (max-width:700px) {
 

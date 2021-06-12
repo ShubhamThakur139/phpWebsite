@@ -22,7 +22,7 @@
 <body>
 
     <!-- Navigation starts  -->
-    <nav class="navbar navbar-expand-sm navbar-dark  pl-5 fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-dark  pl-5 fixed-top bgcolor">
         <div class="container-fluid">
             <a class="navbar-brand " href="index.php">DLearning</a>
             <span class="navbar-text mr-5">New way of Learning</span>
