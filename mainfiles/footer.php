@@ -26,7 +26,7 @@
       <div class="modal-footer">
         <span id="successMsg"></span>
         <button type="button" class="btn btn-primary" id="studSignUpBtn" onclick="addStud()">Sign Up</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
       </div>
     </div>
   </div>
@@ -68,7 +68,7 @@
       <div class="modal-footer">
         <span id="logsuccessmsg"></span>
         <button type="button" class="btn btn-primary" id="studLoginBtn" onclick="logStud()">Login</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
       </div>
     </div>
   </div>
@@ -107,7 +107,7 @@
       <div class="modal-footer">
         <span id="admstatusmsg3"></span>
         <button type="button" class="btn btn-primary" onclick="adminLog()" id="adminLoginBtn">Login</button>
-        <button type="button" class="btn btn-secondary" onclick="close()" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-secondary" onclick="close()" data-bs-dismiss="modal">Close</button> -->
       </div>
     </div>
   </div>

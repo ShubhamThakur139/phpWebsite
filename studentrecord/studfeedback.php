@@ -25,9 +25,9 @@ if (isset($_REQUEST['feedbackSubBtn'])) {
     } else {
         $fcontent  = $_REQUEST['f_content'];
         $sql = "INSERT INTO feedback (f_content,stu_id) VALUES ('$fcontent','$studID')";
-        if($conn->query($sql) == TRUE){
+        if ($conn->query($sql) == TRUE) {
             $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert">Submitted Successfully</div>';
-        }else{
+        } else {
             $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert">Submission Failed</div>';
         }
     }
@@ -36,11 +36,13 @@ if (isset($_REQUEST['feedbackSubBtn'])) {
 ?>
 
 <div class="col-sm-6 mt-5">
-<h3 class="text-center mb-4">FeedBack</h3>
+    <h3 class="text-center mb-4">FeedBack</h3>
     <form class="mx-5" action="" method="POST" enctype="multipart/form-data">
         <div class="form-group mb-3">
             <label for="studID" class="form-label font-weight-bold">Student ID</label>
-            <input type="text" name="studID" id="studID" class="form-control" value="<?php if(isset($studID)){ echo $studID; }?>" readonly>
+            <input type="text" name="studID" id="studID" class="form-control" value="<?php if (isset($studID)) {
+                                                                                            echo $studID;
+                                                                                        } ?>" readonly>
         </div>
         <div class="form-group mb-5">
             <label for="f_content" class="form-label font-weight-bold">Give Feedback</label>
