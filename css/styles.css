@@ -107,9 +107,7 @@ html {
 .custom-btn-primary {
     background-color: var(--primary);
     color: white;
-    /* background-image: linear-gradient(51deg, #16a3fe, #41faa4); */
     border: none;
-
 }
 
 
@@ -125,7 +123,6 @@ html {
 }
 
 .txt-banner {
-    /* background-color: var(--ternary); */
     background: linear-gradient(51deg, #16a3fe, #41faa4);
 }
 
@@ -135,7 +132,6 @@ html {
 }
 
 .stripe {
-    /* background-image: linear-gradient(240deg, #504d4d, #898989); */
     background: linear-gradient(51deg, #16a3fe, #41faa4);
     padding: 3rem;
     height: 13rem;
@@ -145,7 +141,6 @@ html {
 }
 
 .social {
-    /* background-color: var(--ternary); */
     background: linear-gradient(51deg, #16a3fe, #41faa4);
 }
 

@@ -11,9 +11,10 @@ if (isset($_SESSION['is_login'])) {
 }
 
 if (isset($studEmail)) {
-    $sql = "SELECT stud_img FROM student WHERE stud_email = '$studEmail'";
+    $sql = "SELECT * FROM student WHERE stud_email = '$studEmail'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
+    $studName = $row['stud_name'];
     $stud_img = $row['stud_img'];
 }
 
@@ -27,27 +28,23 @@ if (isset($studEmail)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap css  -->
-    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font Awesome css  -->
     <link rel="stylesheet" href="../css/all.min.css">
     <!-- Google font ubuntu  -->
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    <!-- owl carouseal css  -->
-    <link rel="stylesheet" href="../css/owl.carousel.css">
-    <link rel="stylesheet" href="../css/owl.theme.green.css">
     <!-- Custom css  -->
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Profile</title>
+    <title>User Profile</title>
 </head>
 
 <body>
     <!-- Top Navbar  -->
 
-    <nav class="navbar navbar-dark fixed-top flex-md-nowrap pl-5 p-0 shadow mb-5" style="background-color: #225470;">
+    <nav class="navbar navbar-dark fixed-top flex-md-nowrap pl-5 p-0 shadow mb-5 " style=" background: linear-gradient(51deg, #16a3fe, #41faa4);">
         <div class="container-fluid">
             <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="../index.php">DLearning</a>
-            <span class="navbar-text mr-5">New way of Learning</span>
+            <span class="text-uppercase " style="font-weight: 700; color: white; font-size: 1.3rem; letter-spacing: 1px;"><?php echo $studName; ?></span>
         </div>
     </nav>
 
@@ -66,15 +63,10 @@ if (isset($studEmail)) {
                                 Profile <span class="sr-only">(current)</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="myCourse.php">
-                                <i class="fab fa-accessible-icon"></i>
-                                My Courses
-                            </a>
-                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="studfeedback.php">
-                                <i class="fab fa-accessible-icon"></i>
+                                <i class="fas fa-comments"></i>
                                 Feedback
                             </a>
                         </li>

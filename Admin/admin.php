@@ -5,9 +5,6 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-// isset() : The isset() function checks whether a variable is set, which means that it has to be declared and is not NULL.
-// This function returns true if the variable exists and is not NULL, otherwise it returns false.
-
 include_once('../dbConnection.php');
 
 // Admin Login with correct fields
@@ -27,6 +24,6 @@ if (!isset($_SESSION['is_admin_login'])) {
             echo json_encode($row);
         }
     }
-}else {
+} else {
     echo json_encode("Login");
 }

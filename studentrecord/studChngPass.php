@@ -12,24 +12,21 @@ if (isset($_SESSION['is_login'])) {
     echo "<script> location.href = '../index.php'; </script>";
 }
 
-if(isset($_REQUEST['studUpdPassBtn'])){
-    if($_REQUEST['inputNewPassword'] == ""){
+if (isset($_REQUEST['studUpdPassBtn'])) {
+    if ($_REQUEST['inputNewPassword'] == "") {
         $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert">All Fields are Required !</div>';
-    }else{
+    } else {
         $sql = "SELECT * FROM student WHERE stud_email = '$studEmail'";
         $result = $conn->query($sql);
-        if($result->num_rows == 1){
+        if ($result->num_rows == 1) {
             $newPass = $_REQUEST['inputNewPassword'];
             $sql = "UPDATE student SET stud_pass = '$newPass' WHERE stud_email = '$studEmail' ";
-            if($conn->query($sql) == TRUE){
+            if ($conn->query($sql) == TRUE) {
                 $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert">Password Updated Successfully</div>';
-            }else{
+            } else {
                 $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert">Unable to Update</div>';
             }
-
         }
-        
-        
     }
 }
 
@@ -49,16 +46,15 @@ if(isset($_REQUEST['studUpdPassBtn'])){
             <input type="password" class="form-control" name="inputNewPassword" id="inputNewPassword" placeholder="New Password">
         </div>
         <?php
-        if(isset($msg)){
+        if (isset($msg)) {
             echo $msg;
         }
         ?>
         <div class="text-center mt-4">
-        <button type="submit" class="btn btn-danger"  name="studUpdPassBtn">Update</button>
-        <!-- <button type="reset" class="btn btn-secondary" >Home</button> -->
-        <a class="btn btn-primary" href="../index.php">Home</a>
+            <button type="submit" class="btn btn-danger" name="studUpdPassBtn">Update</button>
+            <a class="btn btn-primary" href="../index.php">Home</a>
         </div>
-        
+
     </form>
 </div>
 

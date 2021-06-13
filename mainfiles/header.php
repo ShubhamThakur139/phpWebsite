@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="./css/all.min.css">
     <!-- Google font ubuntu  -->
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    <!-- owl carouseal css  -->
-    <link rel="stylesheet" href="./css/owl.carousel.css">
-    <link rel="stylesheet" href="./css/owl.theme.green.css">
     <!-- Custom css  -->
     <link rel="stylesheet" href="./css/styles.css">
     <title>DLearning</title>
@@ -25,7 +22,6 @@
     <nav class="navbar navbar-expand-sm navbar-dark  pl-5 fixed-top bgcolor">
         <div class="container-fluid">
             <a class="navbar-brand " href="index.php">DLearning</a>
-            <span class="navbar-text mr-5">New way of Learning</span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

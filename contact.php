@@ -43,7 +43,7 @@ if (isset($_SESSION['submitQueryMessage'])) {
                     <?php if (isset($msg)) {
                         echo $msg;
                     } ?>
-                    <button type="submit" class="custom-btn custom-btn-primary" id="submitQueryMessage" name="submitQueryMessage">Send</button><br><br>
+                    <button type="button" class="custom-btn custom-btn-primary" id="submitQueryMessage" name="submitQueryMessage">Send</button><br><br>
                 </form>
             </div> <!--  End Contact us Row -->
 

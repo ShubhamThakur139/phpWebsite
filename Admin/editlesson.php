@@ -15,23 +15,21 @@ if (isset($_SESSION['is_admin_login'])) {
 
 
 // Update Lesson Details 
-
-if(isset($_REQUEST['updLessonBtn'])){
-    //messae displayed if any field is missing
-    if(($_REQUEST['lessonName'] == "") || ($_REQUEST['lessonDesc'] == "") || ($_REQUEST['lessonID'] == "") || ($_REQUEST['courseID'] == "") || ($_REQUEST['courseName'] == "")){
+if (isset($_REQUEST['updLessonBtn'])) {
+    if (($_REQUEST['lessonName'] == "") || ($_REQUEST['lessonDesc'] == "") || ($_REQUEST['lessonID'] == "") || ($_REQUEST['courseID'] == "") || ($_REQUEST['courseName'] == "")) {
         $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert">All Fields are Required !</div>';
-    }else{
+    } else {
         $lessonID = $_REQUEST['lessonID'];
         $lessonName = $_REQUEST['lessonName'];
         $lessonDesc = $_REQUEST['lessonDesc'];
         $courseID = $_REQUEST['courseID'];
         $courseName = $_REQUEST['courseName'];
-        $lessonLink = '../lessonvid/'.$_FILES['lessonLink']['name'];
+        $lessonLink = '../lessonvid/' . $_FILES['lessonLink']['name'];
 
         $sql = "UPDATE lesson SET lesson_id = '$lessonID', lesson_name = '$lessonName', lesson_desc = '$lessonDesc', course_id = '$courseID', course_name = '$courseName', lesson_link = '$lessonLink' WHERE lesson_id = '$lessonID'";
-        if($conn->query($sql) == TRUE){
+        if ($conn->query($sql) == TRUE) {
             $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert">Update Lesson Details</div>';
-        }else{
+        } else {
             $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert">Unable to Update</div>';
         }
     }
@@ -51,34 +49,48 @@ if(isset($_REQUEST['updLessonBtn'])){
     }
     ?>
 
-<form action="" method="POST" enctype="multipart/form-data">
+    <form action="" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="courseID">Course ID</label>
-            <input type="text" class="form-control" name="courseID" id="courseID" value="<?php if(isset($row['course_id'])){ echo $row['course_id']; } ?>" readonly>
+            <input type="text" class="form-control" name="courseID" id="courseID" value="<?php if (isset($row['course_id'])) {
+                                                                                                echo $row['course_id'];
+                                                                                            } ?>" readonly>
         </div>
         <div class="form-group">
             <label for="courseName">Course Name</label>
-            <input type="text" class="form-control" name="courseName" id="courseName" value="<?php if(isset($row['course_name'])){ echo $row['course_name']; } ?>" readonly>
+            <input type="text" class="form-control" name="courseName" id="courseName" value="<?php if (isset($row['course_name'])) {
+                                                                                                    echo $row['course_name'];
+                                                                                                } ?>" readonly>
         </div>
         <div class="form-group">
             <label for="lessonID">Lesson ID</label>
-            <input type="text" class="form-control" name="lessonID" id="lessonID" value="<?php if(isset($row['lesson_id'])){ echo $row['lesson_id']; } ?>" readonly>
+            <input type="text" class="form-control" name="lessonID" id="lessonID" value="<?php if (isset($row['lesson_id'])) {
+                                                                                                echo $row['lesson_id'];
+                                                                                            } ?>" readonly>
         </div>
         <div class="form-group">
             <label for="lessonName">Lesson Name</label>
-            <input type="text" class="form-control" name="lessonName" id="lessonName" value="<?php if(isset($row['lesson_name'])){ echo $row['lesson_name']; } ?>">
+            <input type="text" class="form-control" name="lessonName" id="lessonName" value="<?php if (isset($row['lesson_name'])) {
+                                                                                                    echo $row['lesson_name'];
+                                                                                                } ?>">
         </div>
         <div class="form-group">
             <label for="lessonDesc">Lesson Description</label>
-            <textarea class="form-control" name="lessonDesc" id="lessonDesc" rows="3" ><?php if(isset($row['lesson_desc'])) { echo $row['lesson_desc']; } ?></textarea>
+            <textarea class="form-control" name="lessonDesc" id="lessonDesc" rows="3"><?php if (isset($row['lesson_desc'])) {
+                                                                                            echo $row['lesson_desc'];
+                                                                                        } ?></textarea>
         </div>
         <div class="form-group">
             <label for="lessonLink">Lesson Video Link </label>
-            <video src="<?php if(isset($row['lesson_link'])){ echo $row['lesson_link']; } ?>" class="video-thumbnail"></video>
+            <video src="<?php if (isset($row['lesson_link'])) {
+                            echo $row['lesson_link'];
+                        } ?>" class="video-thumbnail"></video>
             <input type="file" class="form-control-file" name="lessonLink" id="lessonLink">
         </div>
         <?php
-        if(isset($msg)){echo $msg;}
+        if (isset($msg)) {
+            echo $msg;
+        }
         ?>
         <div class="text-center">
             <button type="submit" class="btn btn-danger" id="updLessonBtn" name="updLessonBtn">Submit</button>

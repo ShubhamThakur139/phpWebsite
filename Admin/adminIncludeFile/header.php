@@ -20,7 +20,7 @@
 
 <body>
     <!-- Top navbar  -->
-    <nav class="navbar navbar-dark  p-0 shadow" style="background-color: #225470;">
+    <nav class="navbar navbar-dark  p-0 shadow" style=" background: linear-gradient(51deg, #16a3fe, #41faa4);">
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" style="color: #FFF;" href="Dashboard.php">DLearning <small style="color: #E7E7E7;">Admin Area</small></a>
     </nav>
 
@@ -44,21 +44,15 @@
                             <a class="nav-link" href="students.php"><i class="fas fa-users"></i>Students</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href=""><i class="fas fa-table"></i>Sell Report</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""><i class="fas fa-rupee-sign"></i>Payment Status</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="adminFeedback.php"><i class="fas fa-comment"></i>Feedback</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="adminChangePass.php" name="admChngPass"><i class="fas fa-key"></i>Change Password</a>
                         </li>
-                            <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="../logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
                         </li>
-                        
+
                     </ul>
                 </div>
             </nav>

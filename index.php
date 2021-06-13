@@ -6,14 +6,12 @@ include('./mainfiles/header.php');
 <!-- Include header section  -->
 
 <!-- Home page starts  -->
-
 <section class="home-page">
     <div class="container-fluid remove-img-margin">
         <div class="home-img">
             <img src="./images/picture.jpg" class="img-fluid" alt="This is an background image">
             <div class="img-content">
                 <h1 class="my-content">Welcome to <span>DigitalLearning</span></h1>
-                <p class="my-content">new way of learning</p>
                 <br>
 
                 <?php
@@ -50,7 +48,6 @@ include('./mainfiles/header.php');
 <!-- end text banner  -->
 
 <!-- popular courses start  -->
-
 <section class="courses">
     <div class="container pt-5">
         <h1 class="text-center mb-3 allheading">POPULAR COURSES</h1>
@@ -74,8 +71,10 @@ include('./mainfiles/header.php');
                             <div class="card-footer">
                                 <p class="card-text d-inline">Price: <small><del>&#8377 ' . $row['course_original_price'] . ' </del></small><span class="font-weight-bolder">&#8377 ' . $row['course_price'] . '</span></p>
                                 ' ?>
-                    <?php if (isset($_SESSION['is_Login'])) {
-                        echo '<a onclick= href="coursedetails.php?course_id = ' . $course_id . '" class="custom-btn custom-btn-primary font-weight-bolder float-right">Enroll</a>';
+                    <?php
+
+                    if (isset($_SESSION['is_login'])) {
+                        echo '<a href="coursedetails.php?course_id=' . $course_id . '" class="custom-btn custom-btn-primary font-weight-bolder float-right" style="color:#fff;">Enroll</a>';
                     } else {
                         echo '<a href="#" data-bs-toggle="modal" data-bs-target="#StudentLoginModal" class="custom-btn custom-btn-primary font-weight-bolder float-right">Enroll</a>';
                     }
@@ -90,8 +89,6 @@ include('./mainfiles/header.php');
             ?>
         </div>
         <!-- End first deck  -->
-
-        <!-- <button class="custom-btn custom-btn-primary font-weight-bolder float-right">Enroll</button> -->
 
         <!-- second deck start  -->
         <div class="card-deck mt-4 ">
@@ -112,8 +109,8 @@ include('./mainfiles/header.php');
                             <div class="card-footer">
                                 <p class="card-text d-inline">Price: <small><del>&#8377 ' . $row['course_original_price'] . ' </del></small><span class="font-weight-bolder">&#8377 ' . $row['course_price'] . '</span></p>'
             ?>
-                    <?php if (isset($_SESSION['is_Login'])) {
-                        echo '<a onclick= href="coursedetails.php?course_id = ' . $course_id . '" class="custom-btn custom-btn-primary font-weight-bolder float-right">Enroll</a>';
+                    <?php if (isset($_SESSION['is_login'])) {
+                        echo '<a href="coursedetails.php?course_id=' . $course_id . '" class="custom-btn custom-btn-primary font-weight-bolder float-right" style="color:#fff;">Enroll</a>';
                     } else {
                         echo '<a href="#" data-bs-toggle="modal" data-bs-target="#StudentLoginModal" class="custom-btn custom-btn-primary font-weight-bolder float-right">Enroll</a>';
                     }
@@ -134,45 +131,16 @@ include('./mainfiles/header.php');
         </div>
     </div>
 </section>
-
 <!-- popular courses end  -->
 
 <!-- start Contact us  -->
-
 <?php
 include('./contact.php');
 ?>
-
 <!-- end Contact us  -->
 
-<!-- start student testimonial  -->
-<!-- <section class="student-testimonial">
-    <div class="container-fluid mt-5" style="background-color: #3dcfd3;" id="Feedback">
-        <h1 class="text-center text-white p-4 testyheading">Student's Feedback</h1>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="testimonial-slider" class="owl-carousel">
-                    <div class="testimonial">
-                        <p class="description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ea dicta illo tempore minima laboriosam ullam, illum ducimus animi, eos beatae earum blanditiis. Corrupti delectus repudiandae esse ab aspernatur voluptas!
-                        </p>
-                        <div class="pic">
-                            <img src="./images/advancedjava.jpg" alt="" />
-                        </div>
-                        <div class="testimonial-prof">
-                            <h4>Sonam</h4>
-                            <small>Web Developer</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- end student testimonial  -->
 
 <!-- start social links  -->
-
 <section>
     <div class="container-fluid social p-2">
         <div class="row">
@@ -191,7 +159,6 @@ include('./contact.php');
         </div>
     </div>
 </section>
-
 <!-- End social links  -->
 
 <!-- start about section  -->
@@ -231,11 +198,3 @@ include('./contact.php');
 include('./mainfiles/footer.php');
 ?>
 <!-- End Including footer section  -->
-
-
-
-
-
-<!-- extra  -->
-<!-- <a href="coursedetails.php?course_id = ' . $course_id . '" class="btn" style="text-align: left; padding: 0px; margin: 0px;"> -->
-<!-- </a> -->
