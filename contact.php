@@ -4,7 +4,7 @@ if (!isset($_SESSION)) {
 }
 include_once('./dbConnection.php');
 
-if (isset($_SESSION['submitQueryMessage'])) {
+if (isset($_REQUEST['submitQueryMessage'])) {
     if (($_REQUEST['name'] == "") || ($_REQUEST['subject'] == "") || ($_REQUEST['email'] == "") || ($_REQUEST['message'] == "")) {
         $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert">All Fields are Required !</div>';
     } else {
@@ -14,6 +14,7 @@ if (isset($_SESSION['submitQueryMessage'])) {
         $qmessage = $_REQUEST['message'];
         $sql = "INSERT INTO studentquery(q_name, q_subject, q_email, q_message) VALUES ('$qname','$qsubject','$qemail','$qmessage') ";
         if ($conn->query($sql) == TRUE) {
+            echo '<meta http-equiv="refresh" content="0;URL=?deleted" />';
             $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert">Submitted Successfully</div>';
         } else {
             $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert">Submission Failed</div>';
@@ -31,19 +32,18 @@ if (isset($_SESSION['submitQueryMessage'])) {
     <div class="container mt-1 py-5">
         <h1 class="text-center mt-4 allheading">Contact Us</h1>
         <hr class="w-25 mx-auto pb-5">
-
         <div class="row">
             <!-- Start contact us Row -->
             <div class="col-md-8">
                 <form action="" method="POST">
                     <input type="text" class="form-control" name="name" placeholder="Name" id="name" required><br>
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" id="subject"><br>
-                    <input type="email" class="form-control" name="email" placeholder="Email" id="email"><br>
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" id="subject" required><br>
+                    <input type="email" class="form-control" name="email" placeholder="Email" id="email" required><br>
                     <textarea class="form-control" name="message" placeholder="How can we help you?" style="height: 120px;" id="message" required></textarea><br>
                     <?php if (isset($msg)) {
                         echo $msg;
                     } ?>
-                    <button type="button" class="custom-btn custom-btn-primary" id="submitQueryMessage" name="submitQueryMessage">Send</button><br><br>
+                    <button type="submit" class="custom-btn custom-btn-primary" id="submitQueryMessage" name="submitQueryMessage">Send</button><br><br>
                 </form>
             </div> <!--  End Contact us Row -->
 
