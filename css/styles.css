@@ -38,19 +38,25 @@ html {
 }
 
 .custom-nav-item a {
+    font-size: 1.2rem;
     text-transform: uppercase;
     color: white !important;
     margin-right: .2rem;
     font-weight: 600;
 }
 
-.custom-nav-item:hover {
+.custom-nav-item a:hover {
+    color: var(--primary) !important;
+    transition: all .3s ease-out;
+}
+
+/* .custom-nav-item:hover {
     background-color: var(--primary);
     outline: none;
     border: none;
     border-radius: 5px;
     transition: all .3s ease;
-}
+} */
 
 .remove-img-margin {
     margin: 0;

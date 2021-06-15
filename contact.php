@@ -14,8 +14,8 @@ if (isset($_REQUEST['submitQueryMessage'])) {
         $qmessage = $_REQUEST['message'];
         $sql = "INSERT INTO studentquery(q_name, q_subject, q_email, q_message) VALUES ('$qname','$qsubject','$qemail','$qmessage') ";
         if ($conn->query($sql) == TRUE) {
-            echo '<meta http-equiv="refresh" content="0;URL=?deleted" />';
             $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert">Submitted Successfully</div>';
+            echo '<meta http-equiv="refresh" content="0;URL=index.php" />';
         } else {
             $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert">Submission Failed</div>';
         }
@@ -34,7 +34,7 @@ if (isset($_REQUEST['submitQueryMessage'])) {
         <hr class="w-25 mx-auto pb-5">
         <div class="row">
             <!-- Start contact us Row -->
-            <div class="col-md-8">
+            <div class="col-md-8 mx-auto">
                 <form action="" method="POST">
                     <input type="text" class="form-control" name="name" placeholder="Name" id="name" required><br>
                     <input type="text" class="form-control" name="subject" placeholder="Subject" id="subject" required><br>
@@ -45,10 +45,25 @@ if (isset($_REQUEST['submitQueryMessage'])) {
                     } ?>
                     <button type="submit" class="custom-btn custom-btn-primary" id="submitQueryMessage" name="submitQueryMessage">Send</button><br><br>
                 </form>
-            </div> <!--  End Contact us Row -->
+            </div>
+            <!--  End Contact us Row -->
 
-            <!-- start contact us 2nd column  -->
-            <div class="col-md-4 stripe text-white text-center">
+
+        </div>
+    </div>
+</section>
+<!-- End Contact us  -->
+
+
+
+
+
+
+
+
+
+<!-- start contact us 2nd column  -->
+<!-- <div class="col-md-4 stripe text-white text-center">
                 <h4>DLearning</h4>
                 <p>DLearning,
                     Near Veer Palace, Ludhiana,
@@ -56,9 +71,5 @@ if (isset($_REQUEST['submitQueryMessage'])) {
                     Phone: +91 1234567890 <br>
                     www.Dlearning.com
                 </p>
-            </div>
-            <!-- End Contact us 2nd column  -->
-        </div>
-    </div>
-</section>
-<!-- End Contact us  -->
+            </div> -->
+<!-- End Contact us 2nd column  -->

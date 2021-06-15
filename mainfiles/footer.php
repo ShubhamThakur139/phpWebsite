@@ -11,7 +11,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="StudentSignUpModalLabel">Sign Up</h5>
+        <h5 class="modal-title font-weight-bold" id="StudentSignUpModalLabel">Sign Up</h5>
         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -40,7 +40,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="StudentLoginModalLabel">Login</h5>
+        <h5 class="modal-title font-weight-bold" id="StudentLoginModalLabel">Login</h5>
         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -78,7 +78,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="adminLoginModalLabel">Admin Login</h5>
+        <h5 class="modal-title font-weight-bold" id="adminLoginModalLabel">Admin Login</h5>
         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -91,7 +91,6 @@
             <label for="adminLoginEmail" class="form-label font-weight-bold">Email address</label>
             <small id="admstatusmsg1"></small>
             <input type="email" class="form-control" name="adminLoginEmail" id="adminLoginEmail" placeholder="Email" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
           </div>
           <div class="mb-3">
             <i class="fa fa-key"></i>
